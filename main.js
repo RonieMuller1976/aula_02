@@ -1,6 +1,6 @@
 //criando a função tocaSomAplausos e buscando a id da tecla para tocar.
-function tocaSomAplausos(){
-    document.querySelector('#som_tecla_aplausos').play();
+function tocaSom(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
 //referencia constante listaDeTeclas que busca todas as classes tecla
 const listaDeTeclas = document.querySelectorAll(".tecla");
