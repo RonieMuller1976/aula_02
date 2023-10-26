@@ -1,13 +1,16 @@
-let inicia = true;
-if(inicia){
-    valor1 = 100;
-    var valor2 = 200;
-    let valor3 = valor1+valor2;
-    console.log("Valor 1 é "+valor1);
-    console.log("Valor 2 é "+valor2);
-    console.log("Valor 3 é "+valor3);
+//criando a função tocaSomAplausos e buscando a id da tecla para tocar.
+function tocaSomAplausos(){
+    document.querySelector('#som_tecla_aplausos').play();
 }
-console.log("Valor 1 fora do bloco if é "+valor1);
-console.log("Valor 2 fora do bloco if é "+valor2);
-console.log("Valor 3 fora do bloco if é "+valor3);
+//referencia constante listaDeTeclas que busca todas as classes tecla
+const listaDeTeclas = document.querySelectorAll(".tecla");
 
+//criar a variavel de contagem
+let contador = 0;
+//laço de repetição While
+while(contador < 9){
+//chamada para tocar o som pelo índice do elemento da lista
+listaDeTeclas[contador].onclick = tocaSomAplausos;
+    contador = contador + 1;
+    console.log(contador);
+}
