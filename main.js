@@ -15,5 +15,10 @@ const idAudio = `#som_${efeito}`;//uso do template string
 tecla.onclick = function(){
     tocaSom(idAudio);
 }
-
+    tecla.onkeydown = function () {
+        tecla.classList.add ('ativa');
+    }
+tecla.onkeyup = function (){
+    tecla.classList.remove('ativa');
+}
 }
